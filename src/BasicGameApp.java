@@ -132,10 +132,10 @@ public class BasicGameApp implements Runnable {
         time.bounce();
         cocoon.bounce();
         butters.wrap();
-        if (caterpillar.rec.intersects(water.rec) && butters.isCrashing == false) {
+        if (caterpillar.rec.intersects(water.rec) && water.isCrashing == false) {
 
             cocoon.isAlive=true;
-            cocoon.isCrashing=true;
+            water.isCrashing=true;
             caterpillar.isAlive=false;
 
             //butters.height = butters.height + 50;
@@ -196,7 +196,12 @@ public class BasicGameApp implements Runnable {
 //
 //
         }
-        if (cocoon.rec.intersects(time.rec) && caterpillar.isCrashing == false) {
+
+        if(caterpillar.rec.intersects(water.rec) == false){
+            water.isCrashing=false;
+
+        }
+        if (cocoon.rec.intersects(time.rec) && cocoon.isCrashing == false) {
 
             butters.isAlive=true;
             cocoon.isCrashing=true;
@@ -262,6 +267,11 @@ public class BasicGameApp implements Runnable {
 //
 //
         }
+
+        if(cocoon.rec.intersects(time.rec)){
+            cocoon.isCrashing=false;
+        }
+
 
 
     }
