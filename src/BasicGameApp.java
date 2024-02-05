@@ -364,26 +364,23 @@ public class BasicGameApp implements Runnable, KeyListener {
         System.out.println(e.getKeyCode());
         if(e.getKeyCode()==38){
             System.out.println("going up");
-            butters.dx=0;
-            butters.dy=-5;
+            time.isNorth=true;
+
         }
 
         if(e.getKeyCode()==40){
             System.out.println("going down");
-            butters.dx=-5;
-            butters.dx=0;
-        }
-
-        if(e.getKeyCode()==39){
-            System.out.println("going right");
-            butters.dx=5;
-            butters.dy=0;
+            time.isSouth =true;
         }
 
         if(e.getKeyCode()==37){
+            System.out.println("going right");
+            time.isEast = true;
+        }
+
+        if(e.getKeyCode()==39){
             System.out.println("going left");
-            butters.dx=-5;
-            butters.dy=0;
+           time.isWest = true;
         }
 
     }
@@ -392,25 +389,25 @@ public class BasicGameApp implements Runnable, KeyListener {
     public void keyReleased(KeyEvent e) {
         if(e.getKeyCode()==38) {
             System.out.println("going up");
-            butters.isNorth = false;
+            time.isNorth = false;
 
         }
 
         if(e.getKeyCode()==37) {
             System.out.println("going left");
-            butters.isWest = false;
+            time.isWest = false;
 
         }
 
         if(e.getKeyCode()==39) {
             System.out.println("going right");
-            butters.isEast = false;
+            time.isEast = false;
 
         }
 
         if(e.getKeyCode()==48) {
             System.out.println("going down");
-            butters.isSouth = false;
+            time.isSouth = false;
 
         }
 

@@ -61,11 +61,23 @@ public class butterfly {
 
     }
     public void bounce() {
-        if(isNorth==true){
-            dy=-4;
-        }
-        if(isNorth==false){
+
+        if (isSouth == false && isSouth== false){
+
             dy=0;
+        } else if (isNorth){
+            dy=-3;
+        }else{
+            dy=3;
+        }
+
+        if (isWest == false && isEast== false){
+
+            dx=0;
+        } else if (isEast){
+            dx=-3;
+        }else{
+            dx=3;
         }
 
 
@@ -89,6 +101,7 @@ public class butterfly {
         rec= new Rectangle(xpos,ypos, width, height);
     }
     public void wrap(){
+
         if(isNorth==true){
             dy=-4;
         }
