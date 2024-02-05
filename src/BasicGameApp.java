@@ -13,6 +13,8 @@
 
 //Graphics Libraries
 import java.awt.Graphics2D;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.image.BufferStrategy;
 import java.awt.*;
 import javax.swing.JFrame;
@@ -22,7 +24,7 @@ import javax.swing.JPanel;
 //*******************************************************************************
 // Class Definition Section
 
-public class BasicGameApp implements Runnable {
+public class BasicGameApp implements Runnable, KeyListener {
 
     //Variable Definition Section
     //Declare the variables used in the program
@@ -274,6 +276,7 @@ public class BasicGameApp implements Runnable {
 
 
 
+
     }
 //    //Pauses or sleeps the computer for the amount specified in milliseconds
     public void pause(int time){
@@ -300,6 +303,8 @@ public class BasicGameApp implements Runnable {
        canvas = new Canvas();
        canvas.setBounds(0, 0, WIDTH, HEIGHT);
        canvas.setIgnoreRepaint(true);
+       canvas.addKeyListener(this);
+
        panel.add(canvas);  // adds the canvas to the panel.
 
        // frame operations
@@ -347,5 +352,67 @@ public class BasicGameApp implements Runnable {
        g.dispose();
 //
       bufferStrategy.show();
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        System.out.println(e.getKeyCode());
+        if(e.getKeyCode()==38){
+            System.out.println("going up");
+            butters.dx=0;
+            butters.dy=-5;
+        }
+
+        if(e.getKeyCode()==40){
+            System.out.println("going down");
+            butters.dx=-5;
+            butters.dx=0;
+        }
+
+        if(e.getKeyCode()==39){
+            System.out.println("going right");
+            butters.dx=5;
+            butters.dy=0;
+        }
+
+        if(e.getKeyCode()==37){
+            System.out.println("going left");
+            butters.dx=-5;
+            butters.dy=0;
+        }
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        if(e.getKeyCode()==38) {
+            System.out.println("going up");
+            butters.isNorth = false;
+
+        }
+
+        if(e.getKeyCode()==37) {
+            System.out.println("going left");
+            butters.isWest = false;
+
+        }
+
+        if(e.getKeyCode()==39) {
+            System.out.println("going right");
+            butters.isEast = false;
+
+        }
+
+        if(e.getKeyCode()==48) {
+            System.out.println("going down");
+            butters.isSouth = false;
+
+        }
+
     }
 }

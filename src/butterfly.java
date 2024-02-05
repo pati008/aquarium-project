@@ -19,6 +19,14 @@ public class butterfly {
 
     public boolean isCrashing;
 
+    public boolean isNorth;
+
+    public boolean isSouth;
+
+    public boolean isEast;
+
+    public boolean isWest;
+
 
     // METHOD DEFINITION SECTION
 
@@ -37,6 +45,10 @@ public class butterfly {
         height = 60;
         isAlive = true;
         rec= new Rectangle(xpos,ypos, width, height);
+        isNorth= false;
+        isWest = false;
+        isSouth= false;
+        isEast= false;
 
     } // constructor
 
@@ -49,6 +61,15 @@ public class butterfly {
 
     }
     public void bounce() {
+        if(isNorth==true){
+            dy=-4;
+        }
+        if(isNorth==false){
+            dy=0;
+        }
+
+
+
         if (xpos < 0 || xpos > 1000-width) {
             dx = -dx;
         }
@@ -68,6 +89,39 @@ public class butterfly {
         rec= new Rectangle(xpos,ypos, width, height);
     }
     public void wrap(){
+        if(isNorth==true){
+            dy=-4;
+        }
+
+        if(isNorth==false){
+            dy=0;
+        }
+
+        if(isSouth==true){
+            dy=+4;
+        }
+
+        if(isSouth==false){
+            dy=0;
+        }
+
+        if(isEast==true){
+            dy=0;
+        }
+
+        if(isEast==false){
+            dy=-4;
+        }
+
+        if(isWest==true){
+            dy=0;
+        }
+
+        if(isWest==false){
+            dy=4;
+        }
+
+
         if (xpos<0){
             xpos=1000-width;
         }
