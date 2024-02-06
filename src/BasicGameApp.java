@@ -47,6 +47,27 @@ public class BasicGameApp implements Runnable, KeyListener {
     public Image timePic;
     public Image waterPic;
 
+    public Image pblue;
+
+    public Image pgold;
+
+    public Image pvividPink;
+
+    public Image plightPink;
+
+    public Image ppurple;
+
+    public Image pgreen;
+
+    public Image ppinkflower;
+
+    public Image ppurpleflower;
+
+    public Image pbluebird;
+
+    public Image pdove;
+
+
 
     //Declare the objects used in the program
     //These are things that are made up of more than one variable type
@@ -57,6 +78,27 @@ public class BasicGameApp implements Runnable, KeyListener {
      private butterfly time;
 
      private butterfly water;
+
+     private butterfly blue;
+
+     private butterfly gold;
+
+     private butterfly vividPink;
+
+     private butterfly lightPink;
+
+     private butterfly purple;
+
+     private butterfly green;
+
+     private butterfly pinkFlower;
+
+     private butterfly purpleFlower;
+
+     private butterfly blueBird;
+
+     public butterfly dove;
+
 
 
 
@@ -101,6 +143,48 @@ public class BasicGameApp implements Runnable, KeyListener {
 
         skyBack = Toolkit.getDefaultToolkit().getImage("sky back.jpg"); //load the picture
 
+        pblue= Toolkit.getDefaultToolkit().getImage("blue");
+        blue= new butterfly((int)(Math.random()*940),(int)(Math.random()*640));
+        blue.isAlive=true;
+
+        pbluebird= Toolkit.getDefaultToolkit().getImage("blue bird");
+        blueBird= new butterfly((int)(Math.random()*940),(int)(Math.random()*640));
+        blueBird.isAlive=true;
+
+        pdove= Toolkit.getDefaultToolkit().getImage("dove");
+        dove= new butterfly((int)(Math.random()*940),(int)(Math.random()*640));
+        dove.isAlive=true;
+
+        pgold= Toolkit.getDefaultToolkit().getImage("gold");
+        gold= new butterfly((int)(Math.random()*940),(int)(Math.random()*640));
+        gold.isAlive=true;
+
+        pgreen= Toolkit.getDefaultToolkit().getImage("green");
+        green= new butterfly((int)(Math.random()*940),(int)(Math.random()*640));
+        green.isAlive=true;
+
+        plightPink= Toolkit.getDefaultToolkit().getImage("light pink");
+        lightPink= new butterfly((int)(Math.random()*940),(int)(Math.random()*640));
+        lightPink.isAlive=true;
+
+        ppinkflower= Toolkit.getDefaultToolkit().getImage("pink flower");
+        pinkFlower= new butterfly((int)(Math.random()*940),(int)(Math.random()*640));
+        pinkFlower.isAlive=true;
+
+        ppurple= Toolkit.getDefaultToolkit().getImage("purple");
+        purple= new butterfly((int)(Math.random()*940),(int)(Math.random()*640));
+        purple.isAlive=true;
+
+        ppurpleflower= Toolkit.getDefaultToolkit().getImage("purpleFlower");
+        purpleFlower= new butterfly((int)(Math.random()*940),(int)(Math.random()*640));
+        purpleFlower.isAlive=true;
+
+        pvividPink= Toolkit.getDefaultToolkit().getImage("vivid pink");
+        vividPink= new butterfly((int)(Math.random()*940),(int)(Math.random()*640));
+        vividPink.isAlive=true;
+
+
+
 
 
     }
@@ -134,6 +218,17 @@ public class BasicGameApp implements Runnable, KeyListener {
         time.bounce();
         cocoon.bounce();
         butters.wrap();
+        blue.bounce();
+        dove.bounce();
+        blueBird.bounce();
+        green.bounce();
+        gold.bounce();
+        lightPink.bounce();
+        pinkFlower.bounce();
+        purple.bounce();
+        purpleFlower.bounce();
+        vividPink.bounce();
+
         if (caterpillar.rec.intersects(water.rec) && water.isCrashing == false) {
 
             cocoon.isAlive=true;
