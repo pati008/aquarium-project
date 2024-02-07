@@ -67,6 +67,8 @@ public class BasicGameApp implements Runnable, KeyListener {
 
     public Image pdove;
 
+    public butterfly[] fliers = new butterfly[100];
+
 
 
     //Declare the objects used in the program
@@ -184,6 +186,11 @@ public class BasicGameApp implements Runnable, KeyListener {
         vividPink.isAlive=true;
 
 
+        for(int z=0; z<fliers.length; z++){
+            fliers[z]=new butterfly((int)(Math.random()*940),(int)(Math.random()*640));
+        }
+
+
 
 
 
@@ -228,6 +235,10 @@ public class BasicGameApp implements Runnable, KeyListener {
         purple.bounce();
         purpleFlower.bounce();
         vividPink.bounce();
+        for(int x=0; x<fliers.length; x++){
+           fliers[x].move();
+        }
+
 
         if (caterpillar.rec.intersects(water.rec) && water.isCrashing == false) {
 
@@ -439,6 +450,10 @@ public class BasicGameApp implements Runnable, KeyListener {
        }
        if(time.isAlive==true){
            g.drawImage(timePic, time.xpos,time.ypos, time.width, time.height, null);
+       }
+
+       for(int x=0;x<fliers.length;x++){
+           g.drawImage(buttersPic, fliers[x].xpos, fliers[x].ypos, fliers[x].width, fliers[x].height, null);
        }
 
 

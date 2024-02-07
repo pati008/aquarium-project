@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27fe7e99-550f-4eb5-8ef3-a13ccf282213" name="Changes" comment="hw due 2/7" />
+    <list default="true" id="27fe7e99-550f-4eb5-8ef3-a13ccf282213" name="Changes" comment="hw due 2/7">
+      <change afterPath="$PROJECT_DIR$/src/LearningArrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BasicGameApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicGameApp.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,9 +50,16 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.BasicGameApp">
     <configuration name="BasicGameApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BasicGameApp" />
+      <module name="aquarium game" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LearningArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LearningArrays" />
       <module name="aquarium game" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -57,6 +68,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.BasicGameApp" />
+        <item itemvalue="Application.LearningArrays" />
       </list>
     </recent_temporary>
   </component>
@@ -118,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707239062182</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="hw due 2/7">
+      <created>1707248950602</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707248950602</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
