@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27fe7e99-550f-4eb5-8ef3-a13ccf282213" name="Changes" comment="hw due 2/7">
-      <change afterPath="$PROJECT_DIR$/src/LearningArrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BasicGameApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicGameApp.java" afterDir="false" />
-    </list>
+    <list default="true" id="27fe7e99-550f-4eb5-8ef3-a13ccf282213" name="Changes" comment="learned arrays!" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707248950602</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="learned arrays!">
+      <created>1707314636551</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707314636551</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,7 +160,8 @@
     <MESSAGE value="HW! 2/5" />
     <MESSAGE value="fixed my move" />
     <MESSAGE value="hw due 2/7" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw due 2/7" />
+    <MESSAGE value="learned arrays!" />
+    <option name="LAST_COMMIT_MESSAGE" value="learned arrays!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

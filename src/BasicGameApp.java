@@ -239,6 +239,11 @@ public class BasicGameApp implements Runnable, KeyListener {
            fliers[x].move();
         }
 
+        if (fliers[x].intersects(fliers[x])&&fliers[x].isCrashing==false){
+            fliers[x]. isAlive=false;
+
+        }
+
 
         if (caterpillar.rec.intersects(water.rec) && water.isCrashing == false) {
 
