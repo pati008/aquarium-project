@@ -234,32 +234,47 @@ public class BasicGameApp implements Runnable, KeyListener {
         pinkFlower.bounce();
         purple.bounce();
         purpleFlower.bounce();
+
+
         vividPink.bounce();
+
         for(int x=0; x<fliers.length; x++){
-           fliers[x].move();
+           fliers[x].wrap();
         }
 
-        if (fliers[x].intersects(fliers[x])&&fliers[x].isCrashing==false){
-            fliers[x]. isAlive=false;
+        for(int x=0; x<fliers.length;x++) {
+            if (fliers[x].rec.intersects(caterpillar.rec) && fliers[x].isCrashing == false) {
+                caterpillar.height=10+caterpillar.height;
+                caterpillar.width=10+caterpillar.width;
 
+
+
+                if (caterpillar.rec.intersects(water.rec) && water.isCrashing == false) {
+
+                    cocoon.isAlive = true;
+                    water.isCrashing = true;
+                    caterpillar.isAlive = false;
+
+                    //butters.height = butters.height + 50;
+                    //butters.width = butters.width + 50;
+                    //  butters.isCrashing = true;
+
+
+                    System.out.println("Crash");
+                }
+            }
         }
 
-
-        if (caterpillar.rec.intersects(water.rec) && water.isCrashing == false) {
-
-            cocoon.isAlive=true;
-            water.isCrashing=true;
-            caterpillar.isAlive=false;
-
-            //butters.height = butters.height + 50;
-            //butters.width = butters.width + 50;
-          //  butters.isCrashing = true;
-
-
-            System.out.println("Crash");
+        for(int z=0;z<fliers.length;z++){
+            for(int y=z+1;y<fliers.length; y++){
+                if(fliers[z].rec.intersects(fliers[y].rec)&&fliers[z].isCrashing==false){
+                    System.out.println("fliers crashing!");
+                }
+            }
+        }
 //
-            //}
-            //...
+                    //}
+                    //...
 //
 //       // if(astro.rec.intersects(astro2.rec)==false){
 //
@@ -308,29 +323,29 @@ public class BasicGameApp implements Runnable, KeyListener {
 //
 //
 //
-        }
+                //}
 
-        if(caterpillar.rec.intersects(water.rec) == false){
-            water.isCrashing=false;
+                if (caterpillar.rec.intersects(water.rec) == false) {
+                    water.isCrashing = false;
 
-        }
-        if (cocoon.rec.intersects(time.rec) && cocoon.isCrashing == false) {
+                }
+                if (cocoon.rec.intersects(time.rec) && cocoon.isCrashing == false) {
 
-            butters.isAlive=true;
-            cocoon.isCrashing=true;
-            cocoon.isAlive=false;
-            water.isAlive=false;
-            time.isAlive=false;
+                    butters.isAlive = true;
+                    cocoon.isCrashing = true;
+                    cocoon.isAlive = false;
+                    water.isAlive = false;
+                    time.isAlive = false;
 
-            //butters.height = butters.height + 50;
-            //butters.width = butters.width + 50;
-            //  butters.isCrashing = true;
+                    //butters.height = butters.height + 50;
+                    //butters.width = butters.width + 50;
+                    //  butters.isCrashing = true;
 
 
-            System.out.println("Crash");
+                    System.out.println("Crash");
 //.
-            //}
-            //...
+                    //}
+                    //...
 //
 //       // if(astro.rec.intersects(astro2.rec)==false){
 //
@@ -379,16 +394,15 @@ public class BasicGameApp implements Runnable, KeyListener {
 //
 //
 //
-        }
+                }
 
-        if(cocoon.rec.intersects(time.rec)){
-            cocoon.isCrashing=false;
-        }
-
-
+                if (cocoon.rec.intersects(time.rec)) {
+                    cocoon.isCrashing = false;
+                }
 
 
-    }
+            }
+
 //    //Pauses or sleeps the computer for the amount specified in milliseconds
     public void pause(int time){
         //sleep
